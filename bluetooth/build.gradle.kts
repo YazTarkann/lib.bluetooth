@@ -48,3 +48,17 @@ dependencies {
     implementation(libs.material)
     implementation("com.google.android.gms:play-services-location:21.0.1")
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = "com.github.YazTarkann"
+                artifactId = "bluetooth"
+                version = project.findProperty("version") as String? ?: "1.0.0"
+            }
+        }
+    }
+}
