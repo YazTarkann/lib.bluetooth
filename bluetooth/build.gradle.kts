@@ -4,9 +4,6 @@ plugins {
     `maven-publish`
 }
 
-group = "yaz.lib"
-version = "1.0.0"
-
 android {
     namespace = "yaz.lib.bluetooth"
     compileSdk = 36
